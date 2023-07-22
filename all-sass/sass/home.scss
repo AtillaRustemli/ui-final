@@ -1,0 +1,37 @@
+@import "./header.scss";
+@import "./variables.scss";
+@import "./reset.scss";
+@import "./drawer.scss";
+@import "./banner.scss";
+@import "./business-progress.scss";
+@import "./about-us.scss";
+@import "./swiper.scss";
+@import "./work-space";
+@import "./youtube-video";
+@import "./team-members";
+@import "./work.progress";
+@import "./discous";
+@import "./business-progress2";
+@import "./business-progress3";
+@import "./b-p4";
+@import "./footer";
+@import "./backToTop";
+html{
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  background-color: $background_color;
+  z-index: -1;
+  width: auto;
+  font-family: "DM Sans", sans-serif;
+  background-image: url("/images/home-images/first_big_picture.png");
+  background-repeat: no-repeat;
+}
+.container {
+  width: 75%;
+  margin: 0px auto;
+  @include homeMedia(576px){
+    width: 100%;
+  }
+}

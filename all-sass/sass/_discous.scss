@@ -1,0 +1,58 @@
+.discous {
+  margin-top: 35px;
+  background-image: url("/images/home-images/discous.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.71);
+  .container {
+    padding: 90px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h3 {
+        word-wrap: break-word;
+      width: 60%;
+      height: auto;
+      color: white;
+      font-size: 40px;
+      @include homeMedia(1200px) {
+        font-size: 30px;
+      }
+      @include homeMedia(1000px){
+        width: 70%;
+        
+    }
+    @include homeMedia(960px){
+        font-size: 24px;
+        text-align: center;
+        width: 62%;
+        
+    }
+      @include homeMedia(768px){
+        font-size: 24px;
+        text-align: center;
+        width: 100%;
+        
+    }
+    }
+    a {
+      width: auto;
+      color: white;
+      padding: 17px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      background-color: $main_red;
+      border-radius: 30px;
+      transition: 0.2s linear;
+    }
+    a:hover{
+        color: black;
+        background-color: rgb(255, 210, 210);
+    }
+    @include homeMedia(768px){
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}
+}

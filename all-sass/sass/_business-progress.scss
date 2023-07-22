@@ -1,0 +1,122 @@
+.business-progress {
+  padding: 120px 0px 120px;
+}
+.business-progress-inner {
+  padding: 0px 7.5px;
+  .business-p-h2 {
+    font-size: 48px;
+    @include homeMedia(1200px) {
+      font-size: 36px;
+    }
+    @include homeMedia(1000px) {
+      font-size: 24px;
+    }
+  }
+  .business-p-starter {
+    display: flex;
+    justify-content: space-between;
+    a {
+      width: auto;
+      border: 1px solid $main_red;
+      background-color: $main_red;
+      border-radius: 30px;
+      padding: 17px 30px;
+      color: white;
+      margin: 50px 0px 0px;
+      align-self: center;
+      justify-self: flex-end;
+      right: -300%;
+      transition: 0.2s linear;
+      &:hover {
+        color: black;
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+      }
+      &:hover i {
+        color: $main_red;
+      }
+      i {
+        font-size: 16px;
+        margin-left: 5px;
+      }
+
+      @include homeMedia(576px) {
+        align-self: flex-start;
+        justify-self: flex-start;
+      }
+    }
+    .b-p {
+      display: flex;
+      width: 60%;
+      align-items: center;
+      img {
+        width: 28px;
+      }
+      span {
+        width: 100%;
+        color: $main_red;
+        font-size: 16px;
+      }
+    }
+  }
+  .business-p-center {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    justify-content: space-between;
+    margin: 80px -15px 0px;
+    row-gap: 10px;
+    div {
+      position: relative;
+      background: linear-gradient(
+        0deg,
+        rgba(241, 241, 241, 1) 0%,
+        rgba(255, 255, 255, 1) 35%
+      );
+      border-radius: 20px;
+      padding: 100px 40px 40px;
+      width: calc((100% / 3) - 20px);
+      img {
+        position: absolute;
+        top: -70px;
+        left: 10px;
+      }
+      .circle-animation-on {
+        transition: 0.7s ease-in-out;
+        transform: rotateZ(360deg);
+      }
+      .circle-animation-out {
+        transition: 0.7s ease-in-out;
+        transform: rotateZ(0deg);
+      }
+      @include homeMedia(1200px) {
+        width: calc((100% / 2) - 30px);
+      }
+      @include homeMedia(1000px) {
+        p {
+          width: 100%;
+        }
+      }
+      @include homeMedia(768px) {
+        width: 70%;
+      }
+    }
+  }
+
+  h5 {
+    font-size: 24px;
+    margin: 0px 0px 20px;
+    color: #1c2539;
+  }
+  p {
+    color: #5d666f;
+    font: 16px;
+  }
+  @include homeMedia(800px) {
+    margin: 0px 8%;
+  }
+}
+.business-p-h2 {
+  font-size: 48px;
+  margin: 13px 0px 0px;
+}

@@ -1,0 +1,150 @@
+.about-us {
+  width: 100%;
+}
+.about-us-inner {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-us-titles {
+  .about-us-pre-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    img {
+      font-size: 28px;
+    }
+    span {
+      font-size: 16px;
+      color: $main_red;
+    }
+  }
+  h2 {
+    font-size: 48px;
+    margin: 13px 0px 0px;
+    color: #181a1c;
+    font-weight: 700;
+  }
+}
+.about-us-info {
+  display: flex;
+  flex-direction: column;
+  p {
+    margin: 40px 0px;
+    font: 16px;
+    color: #5d666f;
+  }
+  @include homeMedia(800px) {
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+.about-us-check {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  border-left: 6px solid $main_red;
+  background-color: white;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    font-size: 16px;
+    color: #181a1c;
+    i {
+      color: $main_red;
+      font-size: 18px;
+      margin-right: 5px;
+    }
+  }
+  @include homeMedia(800px) {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
+.contact-about-us {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  &-left {
+    display: flex;
+    align-items: center;
+    height: auto;
+    img {
+      width: 70px;
+      margin-right: 16px;
+    }
+    div {
+      h6 {
+        font-size: 20px;
+        color: #1c2539;
+        margin-bottom: 5px;
+      }
+      span {
+        font-size: 14px;
+        color: $main_red;
+      }
+    }
+  }
+  &-right {
+    height: auto;
+    display: flex;
+    align-items: center;
+    img {
+      width: 55px;
+      margin-right: 16px;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      span {
+        color: #5d666f;
+        font-size: 18px;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+      a {
+        color: #181a1c;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+  @include homeMedia(800px) {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}
+.about-us-left {
+  width: 45%;
+  @include homeMedia(1200px) {
+    width: 100%;
+  }
+}
+.about-us-right {
+  width: 53%;
+  height: 800px;
+  position: relative;
+  transform: translateY(-20%);
+  @include homeMedia(1200px) {
+    transform: translateY(10px);
+    width: 100%;
+  }
+  img {
+    width: 150%;
+    height: 120%;
+
+    @include homeMedia(1200px) {
+      height: 100%;
+      top: 0px;
+      
+    }
+    @include homeMedia(1200px) {
+      width: 90%;
+      height: 100%;
+      top: 0px;
+    }
+  }
+}
+

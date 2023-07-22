@@ -1,0 +1,155 @@
+.connect {
+  .container {
+    padding: 120px 0px;
+    display: flex;
+    justify-content: center;
+    width: 1305px;
+    background-color: white;
+    .row {
+      width: 80%;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    @include homeMedia(1400px) {
+      width: 1140px;
+    }
+    @include homeMedia(1200px) {
+      width: 960px;
+    }
+    @include homeMedia(990px) {
+      width: 720px;
+    }
+    @include homeMedia(768px) {
+      width: 540px;
+    }
+    @include homeMedia(576px) {
+        width: 100%;
+      }
+  }
+}
+.starter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  p {
+    font-size: 16px;
+    font-family: "Red Hat Display", sans-serif;
+    color: $main_red;
+    position: relative;
+    z-index: 1;
+  }
+  h2 {
+    font-size: 48px;
+    font-family: "Red Hat Display", sans-serif;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+    @include homeMedia(1200px){
+        font-size: 44px;
+    }
+    @include homeMedia(990px){
+        font-size: 36px;
+    }
+    @include homeMedia(768px){
+        font-size: 30px;
+    }
+    @include homeMedia(576px){
+        font-size: 26px;
+    }
+  }
+  &::after {
+    content: 'Contact Us';
+    z-index: 0;
+    color: white;
+    -webkit-text-stroke: 0.5px rgb(231, 231, 231);
+    font-weight:900;
+    position: absolute;
+    font-size: 130px;
+    left: -3%;
+    width: 110%;
+    height: 100%;
+    display: block; 
+    bottom: 50%;
+    @include homeMedia(1200px){
+        font-size: 120px;
+    }
+    @include homeMedia(990px){
+        font-size: 100px;
+    }
+    @include homeMedia(768px){
+        font-size: 80px;
+    }
+    @include homeMedia(576px){
+        font-size: 70px;
+    }
+  }
+}
+.inner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    &-form{
+        width: 100%;
+        input,textarea{
+        font-weight: 400;
+        font-size: 18px;
+        font-family: "DM sans",sans-serif;
+        }
+        input{
+        background-color: #f6f6f6;
+        width: 100%;
+        padding: 0px 15px;
+        margin-bottom: 25px;
+        height: 55px;
+        border-radius: 15px;
+        border: none;
+        outline: none;
+        }
+        textarea{
+        background-color: #f6f6f6;
+        width: 100%;
+        padding: 15px 15px  0px;
+        margin-bottom: 25px;
+        border-radius: 15px;
+        border: none;
+        outline: none;
+        
+      
+        }
+    &>div{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      input{
+        height: 55px;
+        border-radius: 15px;
+        border: none;
+        outline: none;
+        background-color: #f6f6f6;
+        width: 49%;
+        padding: 0px 15px;
+        margin-bottom: 25px;
+        @include homeMedia(768px){
+            width: 100%;
+        }
+
+      }
+    } 
+    }
+    .last-button{
+        cursor: pointer;
+        padding: 17px 30px;
+        background-color: $main_red;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+   
+}

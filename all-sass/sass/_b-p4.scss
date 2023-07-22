@@ -1,0 +1,103 @@
+.b-p4{
+    padding-bottom: 120px;
+    .container{
+        @include homeMedia(1200px){
+            width: 90%;
+        }
+    }
+}
+
+.blog-posts {
+  display: flex;
+  justify-content: space-between;
+  @include homeMedia(1000px){
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+}
+.blog-post {
+    background-color: rgba(238, 238, 238, 0.548);
+    border-radius: 20px;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    & > div {
+        margin-bottom: 10px;
+      span {
+        color: #5d666f;
+      }
+      .red {
+        color: $main_red;
+      }
+    }
+    h5{
+        font-size: 24px;
+        margin-bottom: 10px;
+        transition: 0.2s linear;
+        &:hover{
+            color: $main_red !important;
+        }
+
+        @include homeMedia(1200px){
+            font-size: 19px;
+        }
+    }
+    &>a{
+        font-weight: 600;
+        transition: 0.2s linear;
+        i{
+            border-radius: 50%;
+            padding: 13px;
+            color: white;
+            background-color: $main_red;
+            margin-right: 12px;
+        }
+        &:hover{
+            color: red;
+        }
+    }
+  }
+  @include homeMedia(1000px){
+    padding: 10px;
+    width: 90%;
+  }
+}
+.blog-post-image {
+    height: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  a{
+    width: 0px;
+    height: 0px;
+     img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    transition: 0.2s linear;
+    &:hover {
+      transform: scale(1.1);
+    }
+    @include homeMedia(1000px){
+        height: 100%;
+    }
+  }
+  }
+ 
+  & > span {
+    bottom: 0px;
+    right: 0px;
+    padding: 0px;
+    position: absolute;
+    padding: 7px 13px;
+    border-radius: 20px 0px;
+    color: white;
+    background-color: $main_red;
+ 
+  }
+}

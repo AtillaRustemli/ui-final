@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=DM+Sans:wght@400;500;700&family=Red+Hat+Display:wght@400;500;600;700&display=swap");
+$size: 365px;
+
+.black-bc::before {
+  position: fixed;
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 12;
+  animation-name: darker;
+  animation-timing-function: linear;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes darker {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+.drawer {
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  z-index: 12;
+  transition: 0.2s linear;
+  transform: translateX(100vw);
+  background-color: rgb(255, 255, 255);
+  width: $size;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+
+  top: 0px;
+  padding: 50px 30px 40px;
+  &-left {
+    right: 0px;
+    transform: translateX(0px);
+  }
+
+  &-right {
+    right: 0px;
+    transform: translateX($size);
+  }
+
+  i {
+    font-size: 50px;
+    color: $main_red;
+    cursor: pointer;
+  }
+  p {
+    margin: 30px 0px 40px;
+    color: #5d666f;
+    @include homeMedia(1200px) {
+      display: none;
+    }
+  }
+  .get-in-touch {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    h6 {
+      font-size: 20px;
+    }
+    i {
+      font-size: 16px;
+    }
+    div {
+      display: flex;
+      column-gap: 15px;
+    }
+    a {
+      color: #5d666f;
+    }
+    @include homeMedia(1200px) {
+      display: none;
+    }
+  }
+  .sosial-media-icons {
+    display: flex;
+    margin-top: 50px;
+    column-gap: 10px;
+    a {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $main_red;
+      border-radius: 50%;
+      transition: 0.2s linear;
+    }
+    a:hover {
+      background-color: white;
+      border: white;
+    }
+    a:hover i {
+      color: $main_red;
+    }
+    .drawer-cancel-btn {
+      position: relative;
+      cursor: pointer;
+    }
+    i {
+      font-size: 16px;
+      color: #ffffff;
+    }
+    @include homeMedia(1200px) {
+      i {
+        color: $main_red;
+        transition: 0.2s linear;
+      }
+      a {
+        background-color: #ffffff;
+        transition: 0.2s linear;
+      }
+      a:hover {
+        background-color: $main_red;
+      }
+      a:hover i {
+        color: white;
+      }
+    }
+  }
+
+  &-inner {
+    .drawer-logo {
+      margin: 50px 0px 0px;
+      font-family: "Red Hat Display", sans-serif;
+    }
+  }
+  @include homeMedia(1200px) {
+    background-color: #f6f6f6;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .drawer-nav-list {
+    display: none;
+  }
+}
+.drawer-nav-list {
+  @include homeMedia(1200px) {
+    display: none;
+    margin: 50px 0px 16px;
+    display: flex;
+    flex-direction: column;
+    li {
+      background-color: rgba(255, 255, 255, 2);
+      border-radius: 5px;
+      margin: 10px 48px 10px 0px;
+      padding: 10px;
+      &:hover {
+        color: $main_red;
+      }
+    }
+  }
+}

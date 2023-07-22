@@ -1,0 +1,5 @@
+@mixin homeMedia($maxSize) {
+    @media screen and (max-width: $maxSize) {
+      @content;
+    }
+  }

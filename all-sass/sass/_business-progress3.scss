@@ -1,0 +1,128 @@
+.business-progress3 {
+    overflow: hidden;
+    padding-bottom: 120px;
+    position: relative;
+  .container {
+    display: flex;
+    justify-content: flex-end;
+    display: flex;
+    @include homeMedia(1000px){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+  }
+}
+
+.thinkerImg {
+    display: flex;
+    justify-content: center;
+  img {
+    width: 70%;
+    z-index: -1;
+    position: absolute;
+    left: -20%;
+    top: -30%;
+    @include homeMedia(1600px){
+        width: 80%;
+    }
+    @include homeMedia(1000px){
+        position: static;
+        margin: 0px auto;
+        width: 100%;
+        order: 2;
+    }
+  }
+}
+.business-progress3-inner {
+  width: 55%;
+  align-self: flex-end;
+  .work-space-starter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    div {
+      display: flex;
+    }
+    h2 {
+      margin-top: 13px;
+    }
+  }
+  &-lowerpart {
+    p {
+      margin: 25px 0px 40px;
+      color: #5d666f;
+    }
+    a{
+        padding: 17px 30px;
+        background-color: $main_red;
+        color: white;
+        font-weight: 600;   
+        border-radius: 30px;
+        transition: 0.2s linear;
+        &:hover{
+            color: black;
+            background-color: rgb(255, 223, 223);
+
+        }
+}
+    &-inner {
+    margin: 0px -15px 50px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .piece {
+        width: calc((100% / 2) - 30px);
+        border-radius: 30px;
+        background: linear-gradient(
+          0deg,
+          rgba(93, 102, 111, 0.2) 0%,
+          rgba(255, 255, 255, 1) 100%
+        );
+        padding: 35px;
+        display: flex;
+        justify-content: space-between;
+        & > div {
+          h4 {
+            font-size: 36px;
+          }
+          p {
+            margin: 0px;
+          }
+        }
+        @include homeMedia(1000px){
+           width: 90%;
+        }
+
+      }
+      @include homeMedia(1000px){
+        flex-direction: column;
+        row-gap: 20px;
+        justify-content: center;
+    }
+    }
+  }
+  @include homeMedia(1000px){
+    width: 100%;
+  }
+}
+.business-progress-animation{
+    position: absolute;
+    right: -9%;
+    transform: translateY(100%);
+    animation-name: circe-b-p;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    @include homeMedia(1200px){
+        display: none;
+    }
+}
+@keyframes circe-b-p {
+    from{
+        transform: translateY(100%) rotateZ(0deg);
+    }
+    to{
+        transform: translateY(100%) rotateZ(-360deg);
+    }
+} 

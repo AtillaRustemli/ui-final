@@ -1,0 +1,91 @@
+.latest-posts {
+  background-image: url(/images/blog-images/latest-posts-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 153px 0px;
+  .container{
+    @include homeMedia(1600px){
+        width: 1305px;
+    }
+    @include homeMedia(1400px){
+        width: 1140px;
+    }
+    @include homeMedia(1200px){
+        width: 960px;
+    }
+    @include homeMedia(990px){
+        width: 720px;
+    }
+    @include homeMedia(768px){
+        width: 540px;
+    }
+  }
+}
+.latest-post-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .latest-post-left{
+        
+        display: flex;
+        justify-content: flex-start;
+        h1{
+            font-size: 60px;
+            color: white;
+            font-family: "Red Hat Diplay",sans-serif;
+            @include homeMedia(1200px){
+                font-size: 54px;
+            }
+            @include homeMedia(990px){
+                font-size: 40px;
+            }
+            @include homeMedia(768px){
+                font-size: 30px;
+            }
+
+        }
+        @include homeMedia(768px){
+            justify-content: center;
+        }
+    }
+    .latest-post-right{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .right-inner{
+            display: flex;
+            align-items: center;
+            padding: 12px 30px;
+            background-color: white;
+            border-radius: 31px;
+            span{
+                color: $main_red;
+
+            }
+            a{
+                color: black;
+                margin-left: 5px;
+                font-weight: 600;
+
+            }
+            .gray-color{
+                color: #5d666f;
+                margin-right: 5px ;
+                margin-left: 0px;
+                transition: 0.2s linear;
+                &:hover{
+                    color: $main_red;
+                }
+            }
+            @include homeMedia(768px){
+                margin-top: 30px;
+            }
+        }
+        @include homeMedia(768px){
+            justify-content: center;
+        }
+    }
+    @include homeMedia(768px){
+       flex-direction: column;
+    }
+}

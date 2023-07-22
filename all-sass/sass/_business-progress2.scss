@@ -1,0 +1,82 @@
+.business-progress2 {
+  padding: 120px 0px;
+}
+.b-p2-inner-inside {
+  padding: 60px 0px;
+ 
+}
+.b-p2-inner-inside-inner {
+  margin-left: 20px;
+  overflow: visible !important;
+  background: linear-gradient(
+    0deg,
+    rgba(241, 241, 241, 1) 10%,
+    rgba(255, 255, 255, 1) 35%
+  );
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  padding: 80px 40px 40px;
+ 
+  @include homeMedia(1000px) {
+    width: 100%;
+  }
+}
+.b-p2-inner-inside-child-starter {
+  h5 {
+    font-size: 24px;
+    font-family: "Red Hat Display", sans-serif;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 16px;
+    color: #5d666f;
+    margin-bottom: 25px;
+  }
+}
+.b-p2-inner-inside-child-inner {
+  display: flex;
+  justify-content: space-between;
+  &-firstpart {
+    h6 {
+      font-size: 20px;
+      color: black;
+    }
+    span {
+      font: 18px;
+      color: #5d666f;
+    }
+  }
+  .b-p2-star-area {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 67%,
+      rgba(93, 102, 111, 0.2) 100%
+    );
+    color: #ffae00;
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 7px 12px;
+    column-gap: 5px;
+  }
+}
+.slider-out{
+
+    & > a {
+        display: inline-block;
+        visibility: visible;
+        position: relative;
+        z-index: 5;
+      transform: translateY(50%) translateX(65%); 
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.5430964622176996) 49%,
+          rgba(93, 102, 111, 0.4) 100%
+        );
+        border-radius: 50%;
+        padding: 12px;
+      
+      }
+}

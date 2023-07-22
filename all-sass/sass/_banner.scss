@@ -1,0 +1,90 @@
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 120px 0px 250px;
+
+  &-inner {
+    position: relative;
+  }
+  h1 {
+    align-self: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: auto;
+    font-size: 110px;
+    padding-left: 16%;
+    .let-create {
+      color: #181a1c;
+      font-size: 60px;
+      font-weight: 700;
+    }
+    div {
+      margin-top: -50px;
+    }
+    .succes {
+      color: $main_red;
+    }
+    @include homeMedia(991px) {
+      font-size: 73px;
+      .let-create {
+        font-size: 51px;
+      }
+    }
+    @include homeMedia(576px) {
+      font-size: 62px;
+      .let-create {
+        font-size: 40px;
+      }
+    }
+  }
+  .banner-p {
+    font-size: 20px;
+    color: #74787c;
+    margin: 0px 0px 40px 21%;
+  }
+  .banner-btn {
+    position: relative;
+    border: 1px solid $main_red;
+    background-color: $main_red;
+    border-radius: 30px;
+    padding: 18px 32px;
+    color: white;
+    align-self: center;
+    transition: 0.2s linear;
+    margin-left: 15.9%;
+    bottom: -10%;
+
+    &:hover {
+      color: black;
+      border: 1px solid #ffffff;
+      background-color: #ffffff;
+    }
+
+    @include homeMedia(576px) {
+      display: none;
+    }
+  }
+  .banner-animation {
+    width: 241px;
+    height: 183px;
+    transform: translateX(-80px);
+    animation-name: bannerAnimation;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-direction: alternate;
+  }
+  @keyframes bannerAnimation {
+    from {
+      transform: translateY(170px) translateX(-40px);
+    }
+    to {
+      transform: translateY(140px) translateX(-40px);
+    }
+  }
+}

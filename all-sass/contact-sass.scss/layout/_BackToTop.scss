@@ -1,0 +1,23 @@
+.back-to-top {
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  border: 3px solid $main_red;
+  top: 90%;
+  right: 5%;
+  z-index: 999;
+  color: $main_red;
+  height: 50px;
+  width: 50px;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 16px;
+  i {
+    width: calc(100% - 18px);
+    height: calc(100% - 18px);
+    background-color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+}

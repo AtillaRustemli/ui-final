@@ -1,0 +1,390 @@
+.blogMain-part {
+  background-color: white;
+  display: flex;
+  padding: 120px 0px;
+  .container {
+    display: flex;
+
+    width: 1320px;
+
+    @include homeMedia(1400px) {
+      width: 1155px;
+    }
+    @include homeMedia(1200px) {
+      flex-direction: column;
+      width: 950px;
+    }
+    @include homeMedia(990px) {
+      width: 750px;
+    }
+    @include homeMedia(768px) {
+      width: 555px;
+    }
+  }
+}
+.blog-left {
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 40px 0px 15px;
+  row-gap: 20px;
+  @include homeMedia(1200px) {
+    width: 100%;
+  }
+}
+.blog-left-child {
+  width: 50%;
+  border-radius: 15px;
+  padding: 0px 15px;
+  &-upper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 15px 15px 0px 0px;
+    img {
+      transition: 0.2s linear;
+    }
+    img:hover {
+      scale: 1.2;
+    }
+    .date {
+      z-index: 3;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 20px;
+      bottom: 20px;
+      right: 10px;
+      background-color: white;
+      border-radius: 15px;
+      h6 {
+        font-size: 20px;
+        color: $main_red;
+        font-weight: 600;
+        font-family: "Red Hat Display", sans-serif;
+      }
+      span {
+        color: $main_red;
+        font-weight: 300;
+      }
+    }
+    .introduce {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      background-color: #1c2539;
+      padding: 7px 30px;
+      display: flex;
+      justify-content: flex-start;
+      &-child {
+        margin-right: 25px;
+        color: white;
+        span {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  &-lower {
+    border: 0.5px solid #c8c8c95f;
+    width: auto;
+    padding: 30px;
+    border-radius: 0px 0px 15px 15px;
+    a {
+      &:hover h5 {
+        color: $main_red;
+      }
+    }
+    h5 {
+      display: inline-block;
+      font-size: 24px;
+      margin: 0px;
+      font-family: "Red Hat Display", sans-serif;
+      transition: 0.2s linear;
+    }
+  }
+  @include homeMedia(768px) {
+    width: 100%;
+  }
+}
+.coutner-blog-left {
+  margin-top: 30px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    padding: 15px;
+    margin-right: 10px;
+    background-color: white;
+    font-weight: 600;
+    color: black;
+    transition: 0.2s linear;
+    cursor: pointer;
+    &:hover {
+      background-color: $main_red;
+      color: white;
+    }
+  }
+  .first-button {
+    background-color: $main_red;
+    color: white;
+  }
+}
+.blog-right {
+  width: 35%;
+  padding: 30px 15px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  .search-hear {
+    width: 100%;
+    background-color: #f6f6f6;
+    margin-bottom: 40px;
+    padding: 40px;
+    border-radius: 15px;
+    h5 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      font-family: "Red Hat Display", sans-serif;
+    }
+    .search-input-blog {
+      width: 100%;
+      position: relative;
+      margin-top: 30px;
+
+      input {
+        width: 100%;
+        height: 55px;
+        padding: 0px 70px 0px 25px;
+        border: 0.5px solid white;
+        outline: $main_red;
+        transition: 0.2s linear;
+        border-radius: 5px;
+        &:focus {
+          border: 0.5px solid $main_red;
+        }
+      }
+      button {
+        cursor: pointer;
+        border: none;
+        position: absolute;
+        height: 55px;
+        right: 0px;
+        bottom: 0px;
+        padding: 0px 19px;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        color: white;
+        background-color: $main_red;
+        border-radius: 5px;
+      }
+    }
+  }
+  .catagory {
+    border-radius: 15px;
+    width: 100%;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin-bottom: 40px;
+    row-gap: 20px;
+    a {
+      font-size: 16px;
+      font-weight: 500;
+      color: #5d666f;
+      width: 100%;
+      padding: 15px 25px;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      transition: 0.2s linear;
+      border-radius: 5px;
+      i {
+        color: $main_red;
+      }
+      &:hover {
+        background-color: $main_red;
+        color: white;
+        scale: 1.1;
+      }
+      &:hover i {
+        color: white;
+      }
+    }
+  }
+  .recent-posts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    padding: 40px;
+    background-color: #f6f6f6;
+    h5 {
+      font-size: 24px;
+      font-family: "Red Hat Display", sans-serif;
+      margin-bottom: 10px;
+    }
+    .recent-post-inner {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      margin-top: 30px;
+      &-child {
+        display: flex;
+        .img-container {
+          border-radius: 10px;
+          margin-right: 20px;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            transition: 0.2s linear;
+          }
+          &:hover img {
+            scale: 1.2;
+          }
+        }
+        &-info {
+          display: flex;
+          flex-direction: column;
+          .recent-post-inner-child-date {
+            color: #5d666f;
+            font-size: 16px;
+            span {
+              margin-left: 9px;
+            }
+          }
+          a {
+            h6 {
+              line-height: 26px;
+              margin-top: 5px;
+              font-size: 16px;
+              transition: 0.2s linear;
+              font-weight: 500;
+            }
+            &:hover h6 {
+              color: $main_red;
+            }
+          }
+        }
+      }
+    }
+  }
+  .recent-posts-2 {
+    border-radius: 15px;
+    background-color: #f6f6f6;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 40px;
+    h5 {
+      font-size: 24px;
+      font-family: "Red Hat Display", sans-serif;
+      margin-bottom: 10px;
+    }
+    &-inner {
+      margin-top: 30px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+      &-child {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &-img {
+          width: calc((100% / 3) - 20px);
+          overflow: hidden;
+          border-radius: 10px;
+          img {
+            width: 100%;
+            transition: 0.2s linear;
+          }
+          &:hover img {
+            scale: 1.2;
+          }
+        }
+      }
+    }
+  }
+  .popular-tags {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    padding: 40px;
+    background-color: #f6f6f6;
+    h5 {
+      font-size: 24px;
+      font-family: "Red Hat Display", sans-serif;
+      margin-bottom: 10px;
+    }
+    &-inner {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      a {
+        background-color: white;
+        padding: 5px 16px;
+        margin: 0px 10px 10px 0px;
+        transition: 0.2s linear;
+        border-radius: 5px;
+        &:hover {
+          color: white;
+          background-color: $main_red;
+          scale: 1.2;
+        }
+      }
+    }
+  }
+  .logopart {
+    border-radius: 15px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c2539;
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+      h5 {
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 30px;
+        font-family: "Red Hat Display", sans-serif;
+        color: white;
+      }
+      a {
+        background-color: $main_red;
+        padding: 17px 30px;
+        color: white;
+        border-radius: 15px;
+        font-weight: 600;
+        transition: 0.2s linear;
+        &:hover {
+          color: black;
+          background-color: white;
+        }
+      }
+    }
+    @include homeMedia(1200px) {
+      width: 100%;
+    }
+  }
+  @include homeMedia(1200px) {
+    width: 100%;
+  }
+}

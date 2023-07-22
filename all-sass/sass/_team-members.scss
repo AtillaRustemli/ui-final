@@ -1,0 +1,157 @@
+.team-members {
+  position: relative;
+  display: flex;
+
+  & > img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+  &-regulate {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 100px;
+  }
+  @include homeMedia(1200px){
+    
+  height: auto;
+  }
+}
+.team-members-starter {
+  &-upperpart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      color: $main_red;
+    }
+  }
+  h2 {
+    text-align: center;
+    color: white;
+    font-size: 48px;
+    font-family: "Red Hat Display", sans-serif;
+    margin-top: 13px;
+  }
+}
+.team-members-inner {
+  position: relative;
+  top: 100%;
+  align-self: center;
+  width: auto;
+  height: auto;
+  margin: 30px -15px 250px;
+  display: flex;
+  &-child {
+    margin-top: 30px;
+    padding: 0px 15px;
+    overflow: hidden;
+    border-radius: 25px;
+
+    & > div {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      img {
+        @include homeMedia(1000px) {
+          float: right;
+        }
+      }
+    }
+
+    .red-circle-team-members {
+      width: 333px;
+      height: 333px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -47%;
+      right: -15%;
+      z-index: 1;
+      background-color: $main_red;
+      @include homeMedia(768px) {
+        display: none;
+      }
+    }
+    .team-member-text {
+      position: absolute;
+      bottom: 10%;
+      right: 13%;
+      z-index: 2;
+      h2 {
+        color: white;
+        font-family: "Red Hat Display", sans-serif;
+      }
+      span {
+        color: white;
+      }
+      @include homeMedia(768px) {
+        background-color: $main_red;
+        width: 100%;
+        height: 20%;
+        right: 0px;
+        bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+      }
+    }
+    .team-member-icons {
+      transform: translateY(-50px);
+      transition: 0.2s linear;
+      display: flex;
+      position: absolute;
+      width: 100%;
+      justify-content: center;
+      column-gap: 10px;
+      a {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+      }
+      a:hover i {
+        color: $main_red;
+      }
+      i {
+        font: 24px;
+        color: black;
+        transition: 0.2s linear;
+      }
+    }
+    &:hover .team-member-icons {
+      transform: translateY(70%);
+    }
+    @include homeMedia(1400px) {
+      width: calc(100% / 4);
+      height: 100%;
+    }
+    @include homeMedia(1200px) {
+      width: calc(100% / 3);
+      height: 100%;
+    }
+    @include homeMedia(1000px) {
+      width: calc(100% / 2);
+      height: 100%;
+      background-size: cover;
+    }
+  }
+  @include homeMedia(1400px) {
+    width: 1155px;
+    height: 350px;
+  }
+  @include homeMedia(1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 110%;
+    height:auto;
+  }
+}

@@ -1,0 +1,91 @@
+
+
+.search-time-black-bg::before {
+  position: fixed;
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 12;
+  animation-name: darker;
+  animation-timing-function: linear;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes darker {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+.search-area-position-up {
+  transform: translateY(-100%);
+}
+.search-area-position-down {
+  transform: translateY(0px);
+}
+
+.search-area {
+  position: fixed;
+  top: 0px;
+  z-index: 14;
+  width: 100%;
+  padding: 57px;
+  transition: 0.2s linear;
+  background-color: white;
+  .search-cancel-btn {
+    cursor: pointer;
+    z-index: 17;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    padding: 12px 16px;
+    background-color: $light_red;
+    i {
+      font-size: 18px;
+      color: $main_red;
+    }
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+      border-radius: 5px;
+      width: 70%;
+      padding: 0px 15px;
+      border: none;
+      background-color: #eeeeeea0;
+      padding: 20px 15px;
+      &:focus {
+        outline: none;
+      }
+    }
+    .search-area-btn {
+      border-radius: 0px 5px 5px 0px;
+      padding: 20px;
+      margin-left: -9px;
+      background-color: $main_red;
+      border: none;
+      cursor: pointer;
+      i{
+        color: white;
+      }
+    }
+  }
+  &-inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

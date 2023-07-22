@@ -1,0 +1,103 @@
+.work-progress {
+  padding: 120px 0px;
+  .container {
+    @include homeMedia(1200px) {
+      width: 90%;
+    }
+  }
+}
+
+.work-progress-list {
+  display: flex;
+  align-self: flex-end;
+  column-gap: 60px;
+  li {
+    a {
+      border: none !important;
+      background-color: inherit !important;
+      color: black !important;
+      padding: 0px !important;
+      font-weight: 600;
+    }
+    a:hover {
+      color: $main_red !important;
+    }
+    .red-a-work-progress {
+      color: $main_red !important;
+    }
+  }
+}
+.work-progress-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 10px;
+  margin-top: 70px;
+}
+.work-progress-inner-child {
+  width: calc((100% / 3) - 20px);
+  background-blend-mode: multiply;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: 0.2s linear;
+  & > a {
+    & > img {
+      transition: 0.2s linear;
+      position: relative;
+      z-index: -1;
+      width: 100%;
+    }
+  }
+  &-inner {
+    width: 80%;
+    align-self: center;
+    position: absolute;
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    bottom: 8%;
+    text-align: center;
+    overflow: hidden;
+
+    h5 {
+      font-family: "Red Hat Display", sans-serif;
+      margin-bottom: 2px;
+    }
+    span {
+      color: #5d666f;
+    }
+    .work-progress-animation {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      transform: translateX(-34px) translateY(88px);
+      transition: 0.2s linear;
+    }
+  }
+  .work-progress-big-animation {
+    position: absolute;
+    transform: translateX(260px) translateY(-260px);
+    transition: 0.2s linear;
+  }
+  &:hover img {
+    transform: scale(1.1);
+  }
+  &:hover .work-progress-animation {
+    transform: translateX(-14px) translateY(18px);
+  }
+  &:hover .work-progress-big-animation {
+    transform: translateX(215px) translateY(-90px);
+  }
+  &:hover .black-white {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+  @include homeMedia(990px) {
+    margin: 0px auto;
+    width: 90%;
+  }
+}
