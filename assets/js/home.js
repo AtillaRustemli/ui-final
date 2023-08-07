@@ -30,7 +30,7 @@ document.addEventListener("click", (e) => {
 });
 
 //----------------------drawer-------------------------
-//-----------------------new--------------------------
+//-----------------------new---------------------------
 //----------------------header-------------------------
 let header = document.querySelector(".header-lowerpart");
 let headerScrolled = window.scrollY;
@@ -187,8 +187,6 @@ let calcScrollValue = () => {
     scrollProgress.style.display="grid";
    }
    else{
- 
-      
     scrollProgress.style.display="none";
    }
   scrollProgress.addEventListener("click", (e) => {
